@@ -49,10 +49,10 @@ zokou({ nomCom: "bugmen", categorie: "Menu" }, async (dest, zk, commandeOptions)
    ╚════ ▓▓ ࿇ ▓▓ ════╝`;*/
     menuMsg += `
 hellow : ${ms.pushName}
-╔══════════════════════╗
-║  welcome to JOel md bot  ║
-╚══════════════════════╝
-╔══════════════════════╗
+╔═══════════════════╗
+║  welcome to JOel md   
+╚═══════════════════╝
+╔═══════════════════╗
 ║ bot name  : JOel md bot
 ║ owner name: ${s.OWNER_NAME}
 ║ bot vision: vision 6
@@ -68,7 +68,7 @@ hellow : ${ms.pushName}
 ║ pong : 820 m/s
 ║ ram : 21.9/60.9 Gb
 ║ plugin : ${cm.length}
-╚══════════════════════╝
+╚═══════════════════╝
 *powered by JOel kang'oma*\n\n`;
     for (const cat in coms) {
         if (!emoji[cat]) {
