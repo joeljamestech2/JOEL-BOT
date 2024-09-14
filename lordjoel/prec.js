@@ -68,6 +68,8 @@ zokou({ nomCom: "bugmen", categorie: "Menu" }, async (dest, zk, commandeOptions)
 ║ platiform : heroku       ║
 ║ theme : JOel tech        ║
 ║ pong : 820 m/s           ║
+║ ram : 21.9/60.9 Gb       ║
+║ plugin :                 ║
 ╚══════════════════════╝
 *powered by joel kang'oma*\n\n`;
     for (const cat in coms) {
