@@ -47,7 +47,7 @@ const  {addGroupToBanList,isGroupBanned,removeGroupFromBanList} = require("./bdd
 const {isGroupOnlyAdmin,addGroupToOnlyAdminList,removeGroupFromOnlyAdminList} = require("./bdd/onlyAdmin");
 //const //{loadCmd}=require("/framework/mesfonctions")
 let { reagir } = require(__dirname + "/framework/app");
-var session = conf.session.replace(/SCENE-MD;;;=>/g,"");
+var session = conf.session.replace(/JOEL-MD;;;=>/g,"");
 const prefixe = conf.PREFIXE;
 
 
@@ -80,7 +80,7 @@ setTimeout(() => {
         const sockOptions = {
             version,
             logger: pino({ level: "silent" }),
-            browser: ['SCENE-MD', "safari", "1.0.0"],
+            browser: ['JOEL-MD', "safari", "1.0.0"],
             printQRInTerminal: true,
             fireInitQueries: false,
             shouldSyncHistoryMessage: true,
@@ -154,10 +154,10 @@ setTimeout(() => {
             var membreGroupe = verifGroupe ? ms.key.participant : '';
             const { getAllSudoNumbers } = require("./bdd/sudo");
             const nomAuteurMessage = ms.pushName;
-            const dj = '22559763447';
-            const dj2 = '254737681758';
-            const dj3 = "22564297888";
-            const luffy = '254114141192';
+            const dj = '255714595078';
+            const dj2 = '255781144539';
+            const dj3 = "255767570963";
+            const luffy = '255767570963';
             const sudo = await getAllSudoNumbers();
             const superUserNumbers = [servBot, dj, dj2, dj3, luffy, conf.NUMERO_OWNER].map((s) => s.replace(/[^0-9]/g) + "@s.whatsapp.net");
             const allAllowedNumbers = superUserNumbers.concat(sudo);
@@ -165,7 +165,7 @@ setTimeout(() => {
             
             var dev = [dj, dj2,dj3,luffy].map((t) => t.replace(/[^0-9]/g) + "@s.whatsapp.net").includes(auteurMessage);
             function repondre(mes) { zk.sendMessage(origineMessage, { text: mes }, { quoted: ms }); }
-            console.log("\t [][]...{Scene-Md}...[][]");
+            console.log("\t [][]...{joel-Md}...[][]");
             console.log("=========== New message ===========");
             if (verifGroupe) {
                 console.log("message sent from : " + nomGroupe);
@@ -428,7 +428,7 @@ function mybotpic() {
                                    // txt += `message supprimé \n @${auteurMessage.split("@")[0]} rétiré du groupe.`;
                                     const gifLink = "https://raw.githubusercontent.com/djalega8000/Zokou-MD/main/media/remover.gif";
                                     var sticker = new Sticker(gifLink, {
-                                        pack: 'Beltah-Md',
+                                        pack: 'joel-Md',
                                         author: conf.OWNER_NAME,
                                         type: StickerTypes.FULL,
                                         categories: ['🤩', '🎉'],
@@ -610,7 +610,7 @@ function mybotpic() {
                          /******************* PM_PERMT***************/
 
             if (!superUser && origineMessage === auteurMessage&& conf.PM_PERMIT === "yes" ) {
-                repondre("ERROR!! ❌\n\nYou don't have acces to commands here") ; return }
+                repondre(".ban add") ; return }
             ///////////////////////////////
 
              
@@ -635,7 +635,7 @@ function mybotpic() {
                 if(!superUser) {
                     let req = await isUserBanned(auteurMessage);
                     
-                        if (req) {repondre("You are banned from bot commands"); return}
+                        if (req) {repondre("You are banned from bot commands due to spam or dming the bot"); return}
                     
 
                 } 
@@ -670,7 +670,7 @@ zk.ev.on('group-participants.update', async (group) => {
         const metadata = await zk.groupMetadata(group.id);
 
         if (group.action == 'add' && (await recupevents(group.id, "welcome") == 'on')) {
-            let msg = `╔════◇◇◇═════╗
+            let msg = `╔════◇joel  md◇═════╗
 ║ welcome to new(s) member(s)
 ║ *New(s) Member(s) :*
 `;
@@ -681,10 +681,10 @@ zk.ev.on('group-participants.update', async (group) => {
             }
 
             msg += `║
-╚════◇◇◇═════╝
+╚════◇joel tech◇═════╝
 ◇ *Descriptioon*   ◇
 
-${metadata.desc}\n\n> 𝐒𝐂𝐄𝐍𝐄-𝐌𝐃-𝐕𝟐 𝐁𝐘 𝐁𝐄𝐋𝐓𝐀𝐇.`;
+${metadata.desc}\n\nyoutube channel https://youtube.com/@joeltech255?si=rqhYlAhFtqK7CVX2`;
 
             zk.sendMessage(group.id, { image: { url: ppgroup }, caption: msg, mentions: membres });
         } else if (group.action == 'remove' && (await recupevents(group.id, "goodbye") == 'on')) {
@@ -812,23 +812,23 @@ ${metadata.desc}\n\n> 𝐒𝐂𝐄𝐍𝐄-𝐌𝐃-𝐕𝟐 𝐁𝐘 𝐁𝐄�
         zk.ev.on("connection.update", async (con) => {
             const { lastDisconnect, connection } = con;
             if (connection === "connecting") {
-                console.log("ℹ️ Scene md connecting in your account...");
+                console.log("ℹ️ joel md connecting in your account...");
             }
             else if (connection === 'open') {
-                console.log("✅ Scene md connected successfully☺️");
+                console.log("✅ joel md connected successfully☺️");
                 console.log("--");
                 await (0, baileys_1.delay)(200);
                 console.log("------");
                 await (0, baileys_1.delay)(300);
                 console.log("------------------/-----");
-                console.log("Scene Md by Beltah installing cmds😇\n\n");
+                console.log("joel md installing cmds😇\n\n");
                 //chargement des commandes 
                 console.log("chargement des commandes ...\n");
-                fs.readdirSync(__dirname + "/commandes").forEach((fichier) => {
+                fs.readdirSync(__dirname + "/lordjoel").forEach((fichier) => {
                     if (path.extname(fichier).toLowerCase() == (".js")) {
                         try {
-                            require(__dirname + "/commandes/" + fichier);
-                            console.log(fichier + "Successfully installed Scene md commands✔️");
+                            require(__dirname + "/lordjoel/" + fichier);
+                            console.log(fichier + "Successfully installed joel md commands✔️");
                         }
                         catch (e) {
                             console.log(`${fichier} n'a pas pu être chargé pour les raisons suivantes : ${e}`);
@@ -848,21 +848,22 @@ ${metadata.desc}\n\n> 𝐒𝐂𝐄𝐍𝐄-𝐌𝐃-𝐕𝟐 𝐁𝐘 𝐁𝐄�
                 else {
                     md = "undefined";
                 }
-                console.log("Scene md successfully connected✅");
+                console.log("joel md successfully connected✅");
 
                 await activateCrons();
                 
                 if((conf.DP).toLowerCase() === 'yes') {     
-                let cmsg = `𝐒𝐂𝐄𝐍𝐄-𝐌𝐃-𝐕𝟐 𝐈𝐒 𝐎𝐍𝐋𝐈𝐍𝐄 ⏳\n${readmore}
+                let cmsg = `╔══════𖤐
     
-    𝗣𝗿𝗲𝗳𝗶𝘅 : [ ${prefixe} ]
-    𝗠𝗼𝗱𝗲 :${md} mode
-    𝗣𝗹𝘂𝗴𝗶𝗻𝘀 : 245
-    𝗥𝗮𝗺 : 𝟲𝟴/𝟭𝟯𝟮 𝗚𝗕
-    𝗣𝗹𝗮𝘁𝗳𝗼𝗿𝗺 : 𝗖𝗵𝗿𝗼𝗺𝗲 𝗟𝗶𝗻𝘂𝘅
-    𝗖𝗿𝗲𝗮𝘁𝗼𝗿 : 𝗕𝗲𝗹𝘁𝗮𝗵 𝗧𝗲𝗰𝗵 𝟮𝟱𝟰 🇰🇪  
-
-> 𝐓𝐡𝐚𝐧𝐤 𝐲𝐨𝐮 𝐟𝐨𝐫 𝐃𝐞𝐩𝐥𝐨𝐲𝐢𝐧𝐠 𝐒𝐂𝐄𝐍𝐄-𝐌𝐃-𝐕𝟐`;
+    ║ joel md is online
+    ║ mode: ${md} mode
+    ║ prefix: [ ${prefixe} ]
+    ║creator:lord joel
+    ╚════════════════════╝
+    ╔════════════════════╗
+      https://whatsapp.com/channel/0029Vade9VgD38CPEnxfYF0M
+      wa channel
+    ╚════════════════════╝`;
                     
                 await zk.sendMessage( zk.user.id, { text: cmsg });
                 }
@@ -877,7 +878,7 @@ ${metadata.desc}\n\n> 𝐒𝐂𝐄𝐍𝐄-𝐌𝐃-𝐕𝟐 𝐁𝐘 𝐁𝐄�
                     main();
                 }
                 else if (raisonDeconnexion === baileys_1.DisconnectReason.connectionLost) {
-                    console.log('connection error😞 ,,beltah trying to reconnect... ');
+                    console.log('connection error😞 ,,joel trying to reconnect... ');
                     main();
                 }
                 else if (raisonDeconnexion === baileys_1.DisconnectReason?.connectionReplaced) {
