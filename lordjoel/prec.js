@@ -48,27 +48,27 @@ zokou({ nomCom: "bugmen", categorie: "Menu" }, async (dest, zk, commandeOptions)
    ||
    ╚════ ▓▓ ࿇ ▓▓ ════╝`;*/
     menuMsg += `
-╔════════════════════════════╗
-║ hellow :                        ║
-║ welcome to joel md wa bot       ║       
-║ here are my owner info          ║
-╚════════════════════════════╝
-╔════════════════════════════╗                             ║
-║ bot name  : joel md bot         ║
-║ bot user  :                     ║
-║ owner name:                     ║
-║ bot vision: vision 6            ║
-║ bot mode  :                     ║
-║ bot prefix:                     ║
-║ date(trh) :                     ║        
-║ time(saa) :                     ║
-║ status : bot is online          ║ 
-║ library: bailways               ║
-║ host : chrome (linux)           ║
-║ platiform : heroku              ║
-║ theme : JOel tech               ║
-║                                 ║
-╚════════════════════════════╝
+╔══════════════════════╗
+║ hellow :                 ║
+║ welcome to joel md wa bot║       
+║                          ║
+╚══════════════════════╝
+╔══════════════════════╗
+║ bot name  : joel md bot  ║
+║ bot user  :              ║
+║ owner name:              ║
+║ bot vision: vision 6     ║
+║ bot mode  :              ║
+║ bot prefix:              ║
+║ date(trh) :              ║        
+║ time(saa) :              ║
+║ status : bot is online   ║ 
+║ library: bailways        ║
+║ host : chrome (linux)    ║
+║ platiform : heroku       ║
+║ theme : JOel tech        ║
+║ pong : 820 m/s           ║
+╚══════════════════════╝
 *powered by joel kang'oma*\n\n`;
     for (const cat in coms) {
         if (!emoji[cat]) {
