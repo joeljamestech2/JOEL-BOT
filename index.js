@@ -853,15 +853,15 @@ ${metadata.desc}\n\nyoutube channel https://youtube.com/@joeltech255?si=rqhYlAhF
                 await activateCrons();
                 
                 if((conf.DP).toLowerCase() === 'yes') {     
-                let cmsg = `╔══════𖤐
-║ joel md is online
-║ mode: ${md} mode
-║ prefix: [ ${prefixe} ]
-║creator:lord joel
-╚════════════════════╝
-╔════════════════════╗
-https://whatsapp.com/channel/0029Vade9VgD38CPEnxfYF0M
-╚════════════════════╝`;
+                let cmsg = `╔══════☐
+║☐𝙹𝙾𝙴𝙻 𝙼𝙳 𝙱𝙾𝚃
+║☐𝙼𝙾𝙳𝙴: ${md} mode
+║☐𝙿𝚁𝙴𝙵𝙸𝚇: [ ${prefixe} ]
+║☐𝙲𝚁𝙴𝙰𝚃𝙾𝚁:𝙻𝙾𝚛𝚍 𝙹𝚘𝚎𝚕
+╚═══════════════╝
+╔═══════════════╗
+ ☐https://whatsapp.com/channel/0029Vade9VgD38CPEnxfYF0M
+╚═══════════════╝`;
                     
                 await zk.sendMessage( zk.user.id, { text: cmsg });
                 }
