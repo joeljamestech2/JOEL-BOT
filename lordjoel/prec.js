@@ -48,28 +48,26 @@ zokou({ nomCom: "bugmen", categorie: "Menu" }, async (dest, zk, commandeOptions)
    ||
    ╚════ ▓▓ ࿇ ▓▓ ════╝`;*/
     menuMsg += `
+hellow :
 ╔══════════════════════╗
-║ hellow :                 ║
-║ welcome to joel md wa bot║       
-║                          ║
+║  welcome to JOel md bot  ║
 ╚══════════════════════╝
 ╔══════════════════════╗
-║ bot name  : joel md bot  ║
-║ bot user  :              ║
-║ owner name:              ║
-║ bot vision: vision 6     ║
-║ bot mode  :              ║
-║ bot prefix:              ║
-║ date(trh) :              ║        
-║ time(saa) :              ║
-║ status : bot is online   ║ 
-║ library: bailways        ║
-║ host : chrome (linux)    ║
-║ platiform : heroku       ║
-║ theme : JOel tech        ║
-║ pong : 820 m/s           ║
-║ ram : 21.9/60.9 Gb       ║
-║ plugin :                 ║
+║ bot name  : joel md bot
+║ owner name:
+║ bot vision: vision 6
+║ bot mode  :
+║ bot prefix:  ${s.PREFIXE}
+║ date(trh) : ${date}     
+║ time(saa) : ${temps}
+║ status : bot is online
+║ library: bailways
+║ host : chrome (linux)
+║ platiform : heroku
+║ theme : JOel tech
+║ pong : 820 m/s
+║ ram : 21.9/60.9 Gb
+║ plugin : ${cm.length}
 ╚══════════════════════╝
 *powered by joel kang'oma*\n\n`;
     for (const cat in coms) {
