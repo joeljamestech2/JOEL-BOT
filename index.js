@@ -854,16 +854,14 @@ ${metadata.desc}\n\nyoutube channel https://youtube.com/@joeltech255?si=rqhYlAhF
                 
                 if((conf.DP).toLowerCase() === 'yes') {     
                 let cmsg = `╔══════𖤐
-    
-    ║ joel md is online
-    ║ mode: ${md} mode
-    ║ prefix: [ ${prefixe} ]
-    ║creator:lord joel
-    ╚════════════════════╝
-    ╔════════════════════╗
-      https://whatsapp.com/channel/0029Vade9VgD38CPEnxfYF0M
-      wa channel
-    ╚════════════════════╝`;
+║ joel md is online
+║ mode: ${md} mode
+║ prefix: [ ${prefixe} ]
+║creator:lord joel
+╚════════════════════╝
+╔════════════════════╗
+https://whatsapp.com/channel/0029Vade9VgD38CPEnxfYF0M
+╚════════════════════╝`;
                     
                 await zk.sendMessage( zk.user.id, { text: cmsg });
                 }
